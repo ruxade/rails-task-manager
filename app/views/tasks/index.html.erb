@@ -1,13 +1,11 @@
 <h1>Tasks</h1>
 
+
 <ul>
-  @tasks.each do |task|
+ <% @tasks.each do |task| %>
     <li>
-      <%= task.title  %>
+      <%= link_to task.title, task_path(task) %>
       <%= task.completed ? "Completed" : "Not Completed" %>
-
-
     </li>
-
-
+    <% end %>
 </ul>
